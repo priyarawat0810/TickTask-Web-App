@@ -5,8 +5,8 @@ let colorBoxes = document.querySelectorAll(".colorbar .box div");
 let colorClasses = ["red", "orange", "yellow", "blue"];
 let edit = true;
 let modalVisible = false;
-let uid = new ShortUniqueId();
-
+// let uid = new ShortUniqueId();
+     
 /*--------------------------Load tasks----------------------*/
 function loadTasks(passedColor) {
   let allTaskBoxes = document.querySelectorAll(".task-box");
@@ -274,7 +274,7 @@ add.addEventListener("click", function () {
     let task = inputTask.innerText;
     let selectedPriority = document.querySelector(".active-modal-priority");
     let color = selectedPriority.classList[1];
-    let id = uid();
+    let id = Date.now();
     let taskStatus = "Pending";
 
     /*--------------------------Calling function to save tasks----------------------*/
